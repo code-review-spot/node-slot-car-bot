@@ -3,35 +3,35 @@ var five = require("johnny-five");
 var cars = require("./lib/cars");
 var carTypes = Object.keys(cars);
 
-var TRACK = function(opts){
-	var track = this;
-	track.board = new five.Board();
+var SLOT_CAR_SET = function(opts){
+	var slotCarSet = this;
+	slotCarSet.board = new five.Board();
 
-	track.board.on("error", function(){
+	slotCarSet.board.on("error", function(){
 		console.log("ERROR", arguments);
 	});
 
-	track.board.on("ready", function(){
-		track.emit("ready");
-		track.isReady = true;
+	slotCarSet.board.on("ready", function(){
+		slotCarSet.emit("ready");
+		slotCarSet.isReady = true;
 	});
 }
 
-TRACK.prototype = events.EventEmitter.prototype;
+SLOT_CAR_SET.prototype = events.EventEmitter.prototype;
 
-TRACK.prototype.cars = [];
-TRACK.prototype.board = undefined;
-TRACK.prototype.isReady = false;
+SLOT_CAR_SET.prototype.cars = [];
+SLOT_CAR_SET.prototype.board = undefined;
+SLOT_CAR_SET.prototype.isReady = false;
 
-TRACK.prototype.addCar = function(opts){
-	var track = this;
+SLOT_CAR_SET.prototype.addCar = function(opts){
+	var slotCarSet = this;
 
 	opts.type = opts.type || "digital";
 
 	opts.type = opts.type.toLowerCase();
 	if(opts.pin && carTypes.indexOf(opts.type)!=-1){
 		var car = new cars[opts.type](five, opts);
-		track.cars.push(car);
+		slotCarSet.cars.push(car);
 		return car;
 	}
 	else{
@@ -39,4 +39,4 @@ TRACK.prototype.addCar = function(opts){
 	}
 }
 
-module.exports = TRACK;
+module.exports = SLOT_CAR_SET;

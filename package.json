@@ -1,21 +1,17 @@
 {
-  "name": "slot-car-node-bot",
+  "name": "node-slot-car-bot",
   "version": "0.0.1",
-  "private": true,
-  "scripts": {
-    "start": "node app"
-  },
   "dependencies": {
     "johnny-five": "~0.6.20"
   },
   "engines": {
-    "node": "0.8.x",
+    "node": "0.10.x",
     "npm": "1.1.x"
   },
-  "description": "ERROR: No README.md file found!",
+  "description": "Automate your Slotcar Set with Javascript",
   "main": "index.js",
   "devDependencies": {},
-  "repository": "",
-  "author": "",
+  "repository": "https://github.com/mcwhittemore/node-slot-car-bot",
+  "author": "Matthew Chase Whittemore <mcwhittemore@gmail.com>",
   "license": "BSD"
 }
