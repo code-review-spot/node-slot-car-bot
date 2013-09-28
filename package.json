@@ -1,0 +1,21 @@
+{
+  "name": "slot-car-node-bot",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "start": "node app"
+  },
+  "dependencies": {
+    "johnny-five": "~0.6.20"
+  },
+  "engines": {
+    "node": "0.8.x",
+    "npm": "1.1.x"
+  },
+  "description": "ERROR: No README.md file found!",
+  "main": "index.js",
+  "devDependencies": {},
+  "repository": "",
+  "author": "",
+  "license": "BSD"
+}
