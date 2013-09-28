@@ -68,7 +68,7 @@ board.on("ready", function() {
 	var Yoshi = new SLOT_CAR(sss);
 
 	Yoshi.start();
-	Yoshi.setSpeed(500);
+	Yoshi.setSpeed(400);
 
 	var driver = function(){
 		var avg = (1000/(Yoshi.highs+Yoshi.lows))*Yoshi.highs;
@@ -78,7 +78,7 @@ board.on("ready", function() {
 		}
 		else{
 			setTimeout(driver, 1000);
-			Yoshi.setSpeed(500);
+			Yoshi.setSpeed(400);
 		}
 	}
 
