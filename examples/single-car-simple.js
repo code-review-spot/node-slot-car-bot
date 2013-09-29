@@ -1,11 +1,13 @@
-var stdin = process.openStdin(); 
-require('tty').setRawMode(true);    
-
-var SlotCarSet = require("node-slot-car-bot");
+ var SlotCarSet = require("node-slot-car-bot");
 
 var MySlotCarSet = new SlotCarSet();
 
+console.log("here i am");
+
 MySlotCarSet.on("ready", function(){
+
+	var stdin = process.openStdin(); 
+	require('tty').setRawMode(true);   
 
 	var Yoshi = MySlotCarSet.addCar({pin:6});
 
