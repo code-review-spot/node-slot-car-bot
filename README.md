@@ -20,3 +20,7 @@ MySet.on("ready", function(){
 	car.start();
 });
 ```
+
+## Examples
+
+See the examples folder.
