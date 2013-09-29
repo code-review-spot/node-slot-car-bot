@@ -6,8 +6,8 @@ Automate your Slotcar Set with Javascript
 
 For detailed intructions see [the write up on Will Robots Dream](http://www.willrobotsdream.com/node-slot-car-bot/).
 
-1. `NPM install node-slot-car-bot`
-2. Create a control script
+`NPM install node-slot-car-bot`
+
 ```
 var SlotCarSet = require("node-slot-car-bot");
 
